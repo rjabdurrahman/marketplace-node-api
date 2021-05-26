@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
-const apiRoutes = require('./routes/api');
+const userRoutes = require('./routes/user');
+const postRoutes = require('./routes/post');
+const proposalRoutes = require('./routes/proposal');
 const { connectDB } = require('./utils/db');
 
 connectDB();
@@ -13,7 +15,9 @@ app.use(function (req, res, next) {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use('/api', apiRoutes);
+app.use('/api/user', userRoutes);
+app.use('/api/post', postRoutes);
+app.use('/api/proposal', proposalRoutes);
 
 const PORT = 3000 || process.env.PORT;
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
