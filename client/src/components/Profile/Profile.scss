@@ -1,0 +1,70 @@
+.profile-area {
+    margin: 20px 40px;
+
+    img {
+        height       : 200px;
+        width        : 200px;
+        border-radius: 50%;
+    }
+
+    &>.flex {
+        gap: 20px;
+
+        div:last-of-type {
+            flex      : 1;
+            align-self: center;
+        }
+    }
+
+    .profile-text {
+        input {
+            border    : none !important;
+            box-sizing: border-box;
+        }
+
+        input:hover,
+        input:focus {
+            border: 1px solid #ccc !important;
+        }
+
+        input[name="name"] {
+            font-size: 30px;
+        }
+
+        input[name="title"] {
+            font-size: 25px;
+        }
+    }
+
+    .info {
+        textarea {
+            height: 150px;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+@media only screen and (max-width: 448px) {
+    .profile-area {
+        margin: 10px 10px;
+
+        img {
+            height: 100px;
+            width : 100px;
+        }
+
+        .profile-text {
+            input[name="name"] {
+                font-size: 20px !important;
+            }
+
+            input[name="title"] {
+                font-size: 18px !important;
+            }
+        }
+    }
+
+}

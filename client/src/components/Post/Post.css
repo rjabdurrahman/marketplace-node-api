@@ -1,0 +1,10 @@
+.post{
+    max-height: calc(100vh - 165px);
+    overflow-y: auto;
+}
+.post .title:hover{
+    text-decoration: underline;
+}
+.post .title{
+    color: blue;
+}

@@ -1,0 +1,14 @@
+.overlay-container {
+    width: 100%;
+    min-height: 600px;
+    /* background-image: url('img/bu-bg.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    border: 1px solid transparent;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: 600px;
+}

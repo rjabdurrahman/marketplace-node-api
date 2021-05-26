@@ -1,0 +1,12 @@
+.vision-container {
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0 30px;
+}
+
+@media only screen and (max-width: 448px) { 
+    .vision-container {
+        flex-direction: column;
+    }
+}

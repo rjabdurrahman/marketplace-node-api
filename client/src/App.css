@@ -1,0 +1,89 @@
+body {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.mian-color, .mian-color a, .mian-color button {
+    color: #014387 !important;
+}
+
+.main-bg-color {
+    background-color: #014387 !important;
+    color: white !important;
+}
+
+.robo-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+.mont-font {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+.ex-font {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.pac-font {
+    font-family: 'Pacifico', cursive;
+}
+
+.clearfix::after, .clearfix::before {
+    content: "";
+    display: block;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.flex {
+    display: -webkit-box !important;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box !important;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox !important;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex !important;
+    /* NEW - Chrome */
+    display: flex !important;
+}
+
+.div-box {
+    width: 500px !important;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Features */
+
+.fet {
+    font-weight: bold;
+    font-size: 18px;
+    color: #014387;
+}
+
+input:focus, button:focus, select:focus {
+    outline: none;
+}
+
+.notification {
+    width: 400px;
+    position: fixed;
+    right: 10px;
+    top: 20px;
+    padding-bottom: 20px;
+    z-index: 99999;
+}

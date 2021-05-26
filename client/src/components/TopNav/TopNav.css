@@ -1,0 +1,145 @@
+/* Header Nav div */
+
+.header-nav {
+    background-color: #014387;
+    color           : white !important;
+    position        : sticky;
+    top             : 0;
+    display         : flex !important;
+    justify-content : space-between;
+    align-items     : center;
+    box-sizing      : border-box;
+    padding         : 0 30px;
+    height          : 60px;
+}
+
+.brand-logo {
+    width      : 200px;
+    font-family: "Pacifico", cursive;
+    font-size  : 25px;
+}
+
+.header-nav .user-menu {
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.auth {
+    gap: 18px;
+    order: 3;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.user-menu a {
+    border: 1px solid white !important;
+    margin: 0 8px !important;
+}
+
+@media screen and (max-width: 992px) {
+
+    .header-nav .user-menu {
+        display         : flex;
+        flex-direction  : column;
+        width           : 150px;
+        position        : absolute;
+        top             : 60px;
+        right           : 0;
+        background-color: #014387;
+    }
+
+    .user-menu {
+        background-color: white !important;
+        border: 1px solid #014387;
+    }
+
+    .user-menu a {
+        border    : none !important;
+        text-align: left;
+        color     : #014387;
+    }
+
+    .mobile-nav {
+        display   : block;
+        align-self: center;
+    }
+
+    .login-form {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+
+    .top-login {
+        flex-direction: column;
+        width: 200px;
+    }
+
+    .top-login input{
+        width: 100% !important;
+    }
+
+    .top-login button{
+        padding: 8px !important;
+    }
+}
+
+
+.user-btn {
+    background-color: transparent;
+    color           : white;
+    display         : inline-flex;
+    align-items     : center;
+    margin-left     : 10px;
+}
+
+.user-btn img {
+    height       : 40px;
+    width        : 40px;
+    border-radius: 50%;
+}
+
+
+.top-login input {
+    width: 160px;
+}
+
+.top-login button {
+    outline         : none;
+    border          : none;
+    cursor          : pointer;
+    padding         : 0 12px;
+    background-color: lightblue;
+}
+
+header .w3-button {
+    width: 140px !important;
+}
+
+.w3-dropdown-content {
+    margin   : 0 -70px;
+    min-width: 100px !important;
+}
+
+.w3-dropdown-content::before {
+    content      : "";
+    border-bottom: solid 10px white;
+    border-left  : solid 10px transparent;
+    border-right : solid 10px transparent;
+    position     : absolute;
+    top          : -10px;
+    right        : 5px;
+}
+
+.w3-dropdown-content .w3-button {
+    width: 115px !important;
+}
+
+@media only screen and (max-width: 448px) {
+    .header-nav {
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,66 @@
+.profile-area {
+  margin: 20px 40px;
+}
+
+.profile-area img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.profile-area > .flex {
+  gap: 20px;
+}
+
+.profile-area > .flex div:last-of-type {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.profile-area .profile-text input {
+  border: none !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.profile-area .profile-text input:hover,
+.profile-area .profile-text input:focus {
+  border: 1px solid #ccc !important;
+}
+
+.profile-area .profile-text input[name="name"] {
+  font-size: 30px;
+}
+
+.profile-area .profile-text input[name="title"] {
+  font-size: 25px;
+}
+
+.profile-area .info textarea {
+  height: 150px;
+}
+
+.profile-area .info p {
+  margin-bottom: 12px;
+}
+
+@media only screen and (max-width: 448px) {
+  .profile-area {
+    margin: 10px 10px;
+  }
+  .profile-area img {
+    height: 100px;
+    width: 100px;
+  }
+  .profile-area .profile-text input[name="name"] {
+    font-size: 20px !important;
+  }
+  .profile-area .profile-text input[name="title"] {
+    font-size: 18px !important;
+  }
+}
+/*# sourceMappingURL=Profile.css.map */
