@@ -19,7 +19,7 @@ async function readXLSheader(req, res) {
                 let valueCells = cells.filter(c => c.value);
                 let structedData = {};
                 valueCells.forEach(c => {
-                    let key = c.address.replace(/\d/, '');
+                    let key = c.address.replace(/\d/g, '');
                     structedData['Column' + key] = c.value;
                 });
                 // connection.query(`DELETE FROM XLSHeaderLog_100 WHERE 1;`, function (error, results, fields) {
