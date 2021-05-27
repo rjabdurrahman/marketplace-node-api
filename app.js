@@ -15,5 +15,5 @@ app.use(bodyParser.xml());
 
 app.use('/readXLSheader', readXLSheader);
 
-const PORT = 3000 || process.env.PORT;
+const PORT = 4000;
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
