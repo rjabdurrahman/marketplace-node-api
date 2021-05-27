@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const { readXLSheader } = require('./controllers/readXLSheader');
+const { AnalyzeXLS } = require('./controllers/AnalyzeXLS');
 const { connectDB } = require('./utils/db');
 const bodyParser = require('body-parser');
 require('body-parser-xml')(bodyParser);
@@ -15,7 +16,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(bodyParser.xml());
 
-app.use('/readXLSheader', readXLSheader);
+app.post('/readXLSheader', readXLSheader);
+app.post('/AnalyzeXLS', AnalyzeXLS)
 
 const PORT = 4000;
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));

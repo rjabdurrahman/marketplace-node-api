@@ -1,9 +1,8 @@
 const ExcelJS = require('exceljs');
 const https = require('https');
 const fs = require('fs');
-const { connection } = require('../utils/db');
 
-async function readXLSheader(req, res) {
+async function AnalyzeXLS(req, res) {
     try {
         const file = fs.createWriteStream('sample1_v1.xlsx');
         let fileURL = req.body.ReadXLSHeader.file[0].$.url;
@@ -38,4 +37,4 @@ async function readXLSheader(req, res) {
     }
 }
 
-module.exports = { readXLSheader };
+module.exports = { AnalyzeXLS };
