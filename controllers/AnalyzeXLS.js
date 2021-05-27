@@ -2,6 +2,15 @@ const ExcelJS = require('exceljs');
 const https = require('https');
 const fs = require('fs');
 
+function getDataType(n) {
+    if (typeof (n) == 'number') {
+        if (Number(n) === n && n % 1 === 0) return 'Integer'
+        if (Number(n) === n && n % 1 !== 0) return 'Double'
+        else 'Unknown';
+    }
+    else return typeof(n);
+}
+
 async function AnalyzeXLS(req, res) {
     try {
         const file = fs.createWriteStream('sample1_v1.xlsx');
@@ -18,8 +27,7 @@ async function AnalyzeXLS(req, res) {
                 let structedData = {};
                 valueCells.forEach(c => {
                     let key = c.address.replace(/\d/g, '');
-                    console.log(c.address)
-                    structedData['Column' + key] = typeof(c.value);
+                    structedData['Column' + key] = getDataType(c.value);
                 });
                 res.send(structedData);
             });
