@@ -1,6 +1,7 @@
 const ExcelJS = require('exceljs');
 const https = require('https');
 const fs = require('fs');
+const httpsChecker = require('../utils/httpsChecker');
 
 function getDataType(n) {
     if (typeof (n) == 'number') {
@@ -14,10 +15,10 @@ function getDataType(n) {
 async function AnalyzeXLS(req, res) {
     try {
         const file = fs.createWriteStream('sample1_v1.xlsx');
-        let fileURL = req.body.ReadXLSHeader.file[0].$.url;
+        let fileURL = httpsChecker(req.body.ReadXLSHeader.file[0].$.url);
         let rowNo = req.body.ReadXLSHeader.row[0].$.no;
         const wb = new ExcelJS.Workbook();
-        https.get('https://' + fileURL, response => {
+        https.get(fileURL, response => {
             let stream = response.pipe(file);
             stream.on("finish", async () => {
                 await wb.xlsx.readFile('sample1_v1.xlsx');
